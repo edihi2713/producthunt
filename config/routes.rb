@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :users, only:[:new,:create]
+
 =begin
  get '/products', to: 'products#index'
  get 'products/new', to: 'products#new', as: 'new_product'
