@@ -11,14 +11,17 @@
 					<th>Nombre</th>
 					<th>Url</th>
 					<th>Descrición</th>
+					<th></th>
 				</tr>
 				<% @products.each do |product| %>
 					<tr>
 						<td><%= product.id %></td>
-						<td><%= product.name %></td>
+						<td><%= link_to product.name, product %></td>
 						<td><%= product.url %></td>
 						<td><%= product.description%></td>
+						<th><%= link_to "Editar", edit_product_path(product) %></th>
 					</tr>
+
 				<% end %>
 			</table>
 		</div>
