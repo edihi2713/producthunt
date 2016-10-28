@@ -17,6 +17,7 @@ class User < ApplicationRecord
 
 	has_many :products
 	has_many :comments
+	has_many :votes
 
 	validates :email, uniqueness: true, format: /@/
 	validates :password, presence: true, on: :create
